@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { GymAdmin } from '../../GymAdmin';
-import { GymAdminServiceService } from '../../gym-admin-service.service';
+import { GymAdminServiceService } from '../gym-admin-service.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({

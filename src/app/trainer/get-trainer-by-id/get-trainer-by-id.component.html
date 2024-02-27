@@ -1,0 +1,24 @@
+<p>Get Trainer by id</p>
+
+<form [formGroup] = "trainerIdForm" (ngSubmit)="onSubmit()">
+    
+    <div class="form-group">
+        <label for="id">Trainer ID </label>
+        <input type="number" class="form-control" id="id" name="id" formControlName="id" required>
+        <div class="text-danger" *ngIf="f.id.errors?.['required'] &&((f.id.dirty || f.id.touched))">ID is required</div>
+        <div class="text-danger" *ngIf="f.id.errors?.['min'] && (f.id.dirty || f.id.touched)">ID must be atleast 1</div>
+        
+    </div><br>
+
+    <input type="submit" value="Get Trainer Data" class="btn btn-primary">
+    
+</form>
+<div *ngIf="trainer != null">
+    <br>
+    <div >Trainer id: {{trainer.id}}</div>
+    <div>Trainer Name: {{trainer.trainerName}}</div>
+    <div>Trainer Phone No.: {{trainer.phoneNo}}</div>
+    <div>Trainer Specialization: {{trainer.specialization}}</div>
+    <div>Gym Id: {{trainer.gymAdmin.gymID}}</div>
+    <div>Gym Name: {{trainer.gymAdmin.name}}</div>
+</div>

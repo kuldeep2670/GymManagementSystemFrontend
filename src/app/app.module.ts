@@ -11,6 +11,12 @@ import { GetGymAdminByIdComponent } from './gym/get-gym-admin-by-id/get-gym-admi
 import { DeleteGymAdminByIdComponent } from './gym/delete-gym-admin-by-id/delete-gym-admin-by-id.component';
 import { UpdateGymAdminByIdComponent } from './gym/update-gym-admin-by-id/update-gym-admin-by-id.component';
 import { GymComponent } from './gym/gym.component';
+import { TrainerComponent } from './trainer/trainer.component';
+import { GetAllTrainerComponent } from './trainer/get-all-trainer/get-all-trainer.component';
+import { AddTrainerComponent } from './trainer/add-trainer/add-trainer.component';
+import { GetTrainerByIdComponent } from './trainer/get-trainer-by-id/get-trainer-by-id.component';
+import { DeleteTrainerByIDComponent } from './trainer/delete-trainer-by-id/delete-trainer-by-id.component';
+import { UpdateTrainerByIdComponent } from './trainer/update-trainer-by-id/update-trainer-by-id.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +26,13 @@ import { GymComponent } from './gym/gym.component';
     GetGymAdminByIdComponent,
     DeleteGymAdminByIdComponent,
     UpdateGymAdminByIdComponent,
-    GymComponent
+    GymComponent,
+    TrainerComponent,
+    GetAllTrainerComponent,
+    AddTrainerComponent,
+    GetTrainerByIdComponent,
+    DeleteTrainerByIDComponent,
+    UpdateTrainerByIdComponent
   ],
   imports: [
     BrowserModule,

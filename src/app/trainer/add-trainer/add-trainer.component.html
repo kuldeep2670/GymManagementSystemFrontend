@@ -1,0 +1,32 @@
+<p>Add Trainer</p>
+
+<form [formGroup] = "trainerForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="name">Trainer Name </label>
+        <input type="text" class="form-control" id="name" name="name" formControlName="trainerName" required>
+        <div class="text-danger" *ngIf="f.trainerName.errors?.['required'] &&(f.trainerName.dirty || f.trainerName.touched)">Name is required</div>
+        <div class="text-danger" *ngIf="f.trainerName.errors?.['minlength'] && (f.trainerName.dirty || f.trainerName.touched)">Name must be at least 3 characters long</div>
+        <div class="text-danger" *ngIf="f.trainerName.errors?.['maxlength'] && (f.trainerName.dirty || f.trainerName.touched)">Name cannot exceed 20 characters</div>
+    </div>
+    <div class="form-group">
+        <label for="phoneNo">Phone No </label>
+        <input type="text" class="form-control" id="phoneNo" name="phoneNo" formControlName="phoneNo" required>
+        <div class="text-danger" *ngIf="f.phoneNo.errors?.['required'] &&(f.phoneNo.dirty || f.phoneNo.touched)">Phone No. is required</div>
+        <div class="text-danger" *ngIf="f.phoneNo.errors?.['minlength'] && (f.phoneNo.dirty || f.phoneNo.touched)">Phone No must be 10 digits</div>
+        <div class="text-danger" *ngIf="f.phoneNo.errors?.['maxlength'] && (f.phoneNo.dirty || f.phoneNo.touched)">Phone No must be 10 digits</div>
+    </div>
+    <div class="form-group">
+        <label for="specialization">Specialization </label>
+        <input type="text" class="form-control" id="specialization" name="specialization" formControlName="specialization" required>
+        <div class="text-danger" *ngIf="f.specialization.errors?.['required'] &&(f.specialization.dirty || f.specialization.touched)">Specialization is required</div>        
+    </div>
+    
+    <div class="form-group">
+        <label for="gymID">Gym ID </label>
+        <input type="number" class="form-control" id="gymID" name="gymID" formControlName="gymID" required>
+        <div class="text-danger" *ngIf="f.gymID.errors?.['required'] &&((f.gymID.dirty || f.gymID.touched))">ID is required</div>
+        <div class="text-danger" *ngIf="f.gymID.errors?.['min'] && (f.gymID.dirty || f.gymID.touched)">ID must be atleast 1</div>
+    </div><br>
+
+    <input type="submit" value="Add Trainer" class="btn btn-primary">
+</form>
