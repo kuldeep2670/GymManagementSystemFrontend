@@ -1,0 +1,21 @@
+<p>Add Gym</p>
+
+<form [formGroup] = "gymForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="name">Name </label>
+        <input type="text" class="form-control" id="name" name="name" formControlName="name" required>
+        <div class="text-danger" *ngIf="f.name.errors?.['required'] &&(f.name.dirty || f.name.touched)">Name is required</div>
+        <div class="text-danger" *ngIf="f.name.errors?.['minlength'] && (f.name.dirty || f.name.touched)">Name must be at least 3 characters long</div>
+        <div class="text-danger" *ngIf="f.name.errors?.['maxlength'] && (f.name.dirty || f.name.touched)">Name cannot exceed 20 characters</div>
+    </div>
+    <div class="form-group">
+        <label for="location">Location </label>
+        <input type="text" class="form-control" id="location" name="location" formControlName="location" required>
+        <div class="text-danger" *ngIf="f.location.errors?.['required'] &&(f.location.dirty || f.location.touched)">Location is required</div>
+        <div class="text-danger" *ngIf="f.location.errors?.['minlength'] && (f.location.dirty || f.location.touched)">Location must be at least 3 characters long</div>
+        <div class="text-danger" *ngIf="f.location.errors?.['maxlength'] && (f.location.dirty || f.location.touched)">Location cannot exceed 20 characters</div>
+    </div>
+    
+
+    <input type="submit" value="Add Gym" class="btn btn-primary">
+</form>
