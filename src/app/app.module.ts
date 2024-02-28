@@ -17,6 +17,8 @@ import { AddTrainerComponent } from './trainer/add-trainer/add-trainer.component
 import { GetTrainerByIdComponent } from './trainer/get-trainer-by-id/get-trainer-by-id.component';
 import { DeleteTrainerByIDComponent } from './trainer/delete-trainer-by-id/delete-trainer-by-id.component';
 import { UpdateTrainerByIdComponent } from './trainer/update-trainer-by-id/update-trainer-by-id.component';
+import { PackagesComponent } from './packages/packages.component';
+import { GetAllPackageComponent } from './packages/get-all-package/get-all-package.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { UpdateTrainerByIdComponent } from './trainer/update-trainer-by-id/updat
     AddTrainerComponent,
     GetTrainerByIdComponent,
     DeleteTrainerByIDComponent,
-    UpdateTrainerByIdComponent
+    UpdateTrainerByIdComponent,
+    PackagesComponent,
+    GetAllPackageComponent
   ],
   imports: [
     BrowserModule,

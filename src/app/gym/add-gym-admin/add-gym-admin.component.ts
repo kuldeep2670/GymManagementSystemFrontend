@@ -30,12 +30,12 @@ export class AddGymAdminComponent {
     this.gym.location = this.gymForm.get('location')?.value;
 
     this.gymService.add(this.gym).subscribe((result: any)=>{
-      this.goToEmpList();
+      this.goToGymList();
       console.log(result);
     });
   }
 
-  goToEmpList(){
+  goToGymList(){
     this.route.navigate(['/gym/getall']);
   }
 }

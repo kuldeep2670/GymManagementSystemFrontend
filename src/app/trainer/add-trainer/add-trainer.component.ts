@@ -34,12 +34,12 @@ export class AddTrainerComponent {
     
 
     this.trainerService.add(this.trainer).subscribe((result: any)=>{
-      this.goToEmpList();
+      this.goToTrainerList();
       console.log(result);
     });
   }
 
-  goToEmpList(){
+  goToTrainerList(){
     this.route.navigate(['/trainer/getall']);
   }
 }

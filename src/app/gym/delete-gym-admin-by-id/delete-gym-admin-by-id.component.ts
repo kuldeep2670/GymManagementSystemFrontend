@@ -23,13 +23,13 @@ export class DeleteGymAdminByIdComponent {
     this.gymService.deleteById(ID).subscribe((responseData)=>{
     
       console.log(responseData);
-      this.goToEmpList();
+      this.goToGymList();
 
     })
     
   }
 
-  goToEmpList(){
+  goToGymList(){
     this.route.navigate(['/gym/getall']);
   }
 

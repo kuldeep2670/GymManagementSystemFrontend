@@ -23,13 +23,13 @@ export class DeleteTrainerByIDComponent {
     this.trainerService.deleteById(ID).subscribe((responseData)=>{
     
       console.log(responseData);
-      this.goToEmpList();
+      this.goToTrainerList();
 
     })
     
   }
 
-  goToEmpList(){
+  goToTrainerList(){
     this.route.navigate(['/trainer/getall']);
   }
 
