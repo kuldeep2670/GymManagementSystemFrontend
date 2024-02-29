@@ -22,6 +22,7 @@ import { GetAllPackageComponent } from './packages/get-all-package/get-all-packa
 import { AddPackageComponent } from './packages/add-package/add-package.component';
 import { GetPackageByIdComponent } from './packages/get-package-by-id/get-package-by-id.component';
 import { UpdatePackageByIdComponent } from './packages/update-package-by-id/update-package-by-id.component';
+import { DeletePackageByIdComponent } from './packages/delete-package-by-id/delete-package-by-id.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { UpdatePackageByIdComponent } from './packages/update-package-by-id/upda
     GetAllPackageComponent,
     AddPackageComponent,
     GetPackageByIdComponent,
-    UpdatePackageByIdComponent
+    UpdatePackageByIdComponent,
+    DeletePackageByIdComponent
   ],
   imports: [
     BrowserModule,

@@ -17,6 +17,7 @@ import { GetAllPackageComponent } from './packages/get-all-package/get-all-packa
 import { AddPackageComponent } from './packages/add-package/add-package.component';
 import { GetPackageByIdComponent } from './packages/get-package-by-id/get-package-by-id.component';
 import { UpdatePackageByIdComponent } from './packages/update-package-by-id/update-package-by-id.component';
+import { DeletePackageByIdComponent } from './packages/delete-package-by-id/delete-package-by-id.component';
 
 const routes: Routes = [
   {
@@ -48,7 +49,8 @@ const routes: Routes = [
       {path:'getall',component:GetAllPackageComponent},
       {path:'add', component:AddPackageComponent},
       {path:'get', component:GetPackageByIdComponent},
-      {path:'update', component:UpdatePackageByIdComponent}
+      {path:'update', component:UpdatePackageByIdComponent},
+      {path:'delete', component:DeletePackageByIdComponent}
     ]
   }
 ];

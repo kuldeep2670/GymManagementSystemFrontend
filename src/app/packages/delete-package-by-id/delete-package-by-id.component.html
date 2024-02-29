@@ -1,0 +1,15 @@
+<p>Delete Package by id</p>
+
+<form [formGroup] = "packageIdForm" (ngSubmit)="onSubmit()">
+    
+    <div class="form-group">
+        <label for="packageNo">Package No </label>
+        <input type="number" class="form-control" id="packageNo" name="packageNo" formControlName="packageNo" required>
+        <div class="text-danger" *ngIf="f.packageNo.errors?.['required'] &&((f.packageNo.dirty || f.packageNo.touched))">Package No is required</div>
+        <div class="text-danger" *ngIf="f.packageNo.errors?.['min'] && (f.packageNo.dirty || f.packageNo.touched)">Package No must be atleast 1</div>
+        
+    </div><br>
+
+    <input type="submit" value="Get Package Data" class="btn btn-primary">
+    
+</form>

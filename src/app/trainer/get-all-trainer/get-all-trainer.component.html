@@ -2,20 +2,24 @@
 <p>List of Trainers</p>
 
 <table >
-    <tr>
-        <th>Trainer ID</th>
-        <th>Trainer Name</th>
-        <th>Trainer PhoneNo.</th>
-        <th>Trainer Specialization</th>
-        <th>Gym Id</th>
-        <th>Gym Name</th>
-    </tr>
-    <tr *ngFor = "let trainer of trainerList">
-        <td>{{trainer.id}}</td>
-        <td>{{trainer.trainerName}}</td>
-        <td>{{trainer.phoneNo}}</td>
-        <td>{{trainer.specialization}}</td>
-        <td>{{trainer.gymAdmin.gymID}}</td>
-        <td>{{trainer.gymAdmin.name}}</td>
-    </tr>
+    <thead>
+        <tr>
+            <th>Trainer ID</th>
+            <th>Trainer Name</th>
+            <th>Trainer PhoneNo.</th>
+            <th>Trainer Specialization</th>
+            <th>Gym Id</th>
+            <th>Gym Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let trainer of trainerList">
+            <td>{{trainer.id}}</td>
+            <td>{{trainer.trainerName}}</td>
+            <td>{{trainer.phoneNo}}</td>
+            <td>{{trainer.specialization}}</td>
+            <td>{{trainer.gymAdmin.gymID}}</td>
+            <td>{{trainer.gymAdmin.name}}</td>
+        </tr>
+    </tbody>
 </table>

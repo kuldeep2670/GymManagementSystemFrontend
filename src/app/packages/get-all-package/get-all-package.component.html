@@ -1,18 +1,22 @@
 <p>List of Packages</p>
 
 <table >
-    <tr>
-        <th>Package No</th>
-        <th>Package Name</th>
-        <th>Package Fees</th>
-        <th>Meal Included</th>
-        
-    </tr>
-    <tr *ngFor = "let package of packageList">
-        <td>{{package.packageNo}}</td>
-        <td>{{package.packageName}}</td>
-        <td>{{package.packageFees}}</td>
-        <td>{{package.mealIncluded}}</td>
-        
-    </tr>
+    <thead>
+        <tr>
+            <th>Package No</th>
+            <th>Package Name</th>
+            <th>Package Fees</th>
+            <th>Meal Included</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let package of packageList">
+            <td>{{package.packageNo}}</td>
+            <td>{{package.packageName}}</td>
+            <td>{{package.packageFees}}</td>
+            <td>{{package.mealIncluded}}</td>
+            
+        </tr>
+    </tbody>
 </table>

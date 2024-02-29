@@ -1,14 +1,18 @@
 <p>List of Gyms</p>
 
 <table >
-    <tr>
-        <th>Gym ID</th>
-        <th>Gym Name</th>
-        <th>Gym Location</th>
-    </tr>
-    <tr *ngFor = "let gym of gymList">
-        <td>{{gym.gymID}}</td>
-        <td>{{gym.name}}</td>
-        <td>{{gym.location}}</td>
-    </tr>
+    <thead>
+        <tr>
+            <th>Gym ID</th>
+            <th>Gym Name</th>
+            <th>Gym Location</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let gym of gymList">
+            <td>{{gym.gymID}}</td>
+            <td>{{gym.name}}</td>
+            <td>{{gym.location}}</td>
+        </tr>
+    </tbody>
 </table>
