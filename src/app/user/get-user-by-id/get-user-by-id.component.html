@@ -1,0 +1,27 @@
+<p>Get User by id</p>
+
+<form [formGroup] = "userIdForm" (ngSubmit)="onSubmit()">
+    
+    <div class="form-group">
+        <label for="id">User ID </label>
+        <input type="number" class="form-control" id="id" name="id" formControlName="id" required>
+        <div class="text-danger" *ngIf="f.id.errors?.['required'] &&((f.id.dirty || f.id.touched))">ID is required</div>
+        <div class="text-danger" *ngIf="f.id.errors?.['min'] && (f.id.dirty || f.id.touched)">ID must be atleast 1</div>
+        
+    </div><br>
+
+    <input type="submit" value="Get User Data" class="btn btn-primary">
+    
+</form>
+<div *ngIf="user != null">
+    <br>
+    <div>User id: {{user.id}}</div>
+    <div>Name: {{user.name}}</div>
+    <div>Email: {{user.email}}</div>
+    <div>Phone No.: {{user.phoneNo}}</div>
+    <div>Package Expiry Date: {{user.packageExpiryDate}}</div>
+    <div>Package Id: {{user.packages.packageNo}}</div>
+    <div>Trainer Id: {{user.trainer.id}}</div>
+    <div>Gym Id: {{user.gymAdmin.gymID}}</div>
+    
+</div>

@@ -1,0 +1,15 @@
+<p>Delete User by id</p>
+
+<form [formGroup] = "userIdForm" (ngSubmit)="onSubmit()">
+    
+    <div class="form-group ">
+        <label for="id">User ID </label>
+        <input type="number" class="form-control" id="id" name="id" formControlName="id" required>
+        <div class="text-danger" *ngIf="f.id.errors?.['required'] &&((f.id.dirty || f.id.touched))">ID is required</div>
+        <div class="text-danger" *ngIf="f.id.errors?.['min'] && (f.id.dirty || f.id.touched)">ID must be atleast 1</div>
+        
+    </div><br>
+
+    <input type="submit" value="Delete User Data" class="btn btn-primary">
+    
+</form>

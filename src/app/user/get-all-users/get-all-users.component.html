@@ -1,0 +1,30 @@
+
+<p>List of Users</p>
+
+<table >
+    <thead>
+        <tr>
+            <th>User ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone No.</th>
+            <th>Package Expiry Date</th>
+            <th>Trainer ID</th>
+            <th>Package ID</th>
+            <th>Gym ID</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let user of userList">
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.phoneNo}}</td>
+            <td>{{user.packageExpiryDate}}</td>
+            <td>{{user.trainer.id}}</td>
+            <td>{{user.packages.packageNo}}</td>
+            <td>{{user.gymAdmin.gymID}}</td>
+            
+        </tr>
+    </tbody>
+</table>

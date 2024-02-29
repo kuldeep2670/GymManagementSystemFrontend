@@ -23,6 +23,12 @@ import { AddPackageComponent } from './packages/add-package/add-package.componen
 import { GetPackageByIdComponent } from './packages/get-package-by-id/get-package-by-id.component';
 import { UpdatePackageByIdComponent } from './packages/update-package-by-id/update-package-by-id.component';
 import { DeletePackageByIdComponent } from './packages/delete-package-by-id/delete-package-by-id.component';
+import { UserComponent } from './user/user.component';
+import { GetAllUsersComponent } from './user/get-all-users/get-all-users.component';
+import { AddUserComponent } from './user/add-user/add-user.component';
+import { GetUserByIdComponent } from './user/get-user-by-id/get-user-by-id.component';
+import { UpdateUserByIdComponent } from './user/update-user-by-id/update-user-by-id.component';
+import { DeleteUserByIdComponent } from './user/delete-user-by-id/delete-user-by-id.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +50,13 @@ import { DeletePackageByIdComponent } from './packages/delete-package-by-id/dele
     AddPackageComponent,
     GetPackageByIdComponent,
     UpdatePackageByIdComponent,
-    DeletePackageByIdComponent
+    DeletePackageByIdComponent,
+    UserComponent,
+    GetAllUsersComponent,
+    AddUserComponent,
+    GetUserByIdComponent,
+    UpdateUserByIdComponent,
+    DeleteUserByIdComponent
   ],
   imports: [
     BrowserModule,

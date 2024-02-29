@@ -1,0 +1,59 @@
+<p>Update User by id</p>
+
+<form [formGroup] = "userForm" (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+        <label for="uid">User ID </label>
+        <input type="number" class="form-control" id="uid" name="uid" formControlName="uid" required>
+        <div class="text-danger" *ngIf="f.uid.errors?.['required'] &&((f.uid.dirty || f.uid.touched))">ID is required</div>
+        <div class="text-danger" *ngIf="f.uid.errors?.['min'] && (f.uid.dirty || f.uid.touched)">ID must be atleast 1</div>
+    </div><br>
+
+    <div class="form-group">
+        <label for="name">Updated User Name </label>
+        <input type="text" class="form-control" id="name" name="name" formControlName="name" required>
+        <div class="text-danger" *ngIf="f.name.errors?.['required'] &&(f.name.dirty || f.name.touched)">Name is required</div>
+        <div class="text-danger" *ngIf="f.name.errors?.['minlength'] && (f.name.dirty || f.name.touched)">Name must be at least 3 characters long</div>
+        <div class="text-danger" *ngIf="f.name.errors?.['maxlength'] && (f.name.dirty || f.name.touched)">Name cannot exceed 20 characters</div>
+    </div>
+
+    <div class="form-group">
+        <label for="email">Updated Email </label>
+        <input type="email" class="form-control" id="email" name="email" formControlName="email" required>
+        <div class="text-danger" *ngIf="f.email.errors?.['required'] &&(f.email.dirty || f.email.touched)">Email is required</div>
+        <div class="text-danger" *ngIf="f.email.errors?.['email'] &&(f.email.dirty || f.email.touched)">Invalid Email format</div>
+
+    </div>
+
+    <div class="form-group">
+        <label for="phoneNo">Updated Phone No </label>
+        <input type="text" class="form-control" id="phoneNo" name="phoneNo" formControlName="phoneNo" required>
+        <div class="text-danger" *ngIf="f.phoneNo.errors?.['required'] &&(f.phoneNo.dirty || f.phoneNo.touched)">Phone No. is required</div>
+        <div class="text-danger" *ngIf="f.phoneNo.errors?.['minlength'] && (f.phoneNo.dirty || f.phoneNo.touched)">Phone No must be 10 digits</div>
+        <div class="text-danger" *ngIf="f.phoneNo.errors?.['maxlength'] && (f.phoneNo.dirty || f.phoneNo.touched)">Phone No must be 10 digits</div>
+    </div>
+
+    
+    <div class="form-group">
+        <label for="id">Updated Trainer ID </label>
+        <input type="number" class="form-control" id="id" name="id" formControlName="id" required>
+        <div class="text-danger" *ngIf="f.id.errors?.['required'] &&((f.id.dirty || f.id.touched))">ID is required</div>
+        <div class="text-danger" *ngIf="f.id.errors?.['min'] && (f.id.dirty || f.id.touched)">ID must be atleast 1</div>
+    </div><br>
+    <div class="form-group">
+        <label for="packageNo">Updated Package ID</label>
+        <input type="number" class="form-control" id="packageNo" name="packageNo" formControlName="packageNo" required>
+        <div class="text-danger" *ngIf="f.packageNo.errors?.['required'] &&((f.packageNo.dirty || f.packageNo.touched))">ID is required</div>
+        <div class="text-danger" *ngIf="f.packageNo.errors?.['min'] && (f.packageNo.dirty || f.packageNo.touched)">ID must be atleast 1</div>
+    </div><br>
+    <div class="form-group">
+        <label for="gymID">Updated Gym ID </label>
+        <input type="number" class="form-control" id="gymID" name="gymID" formControlName="gymID" required>
+        <div class="text-danger" *ngIf="f.gymID.errors?.['required'] &&((f.gymID.dirty || f.gymID.touched))">ID is required</div>
+        <div class="text-danger" *ngIf="f.gymID.errors?.['min'] && (f.gymID.dirty || f.gymID.touched)">ID must be atleast 1</div>
+    </div><br>
+
+    <input type="submit" value="Update User" class="btn btn-primary">
+</form>
+
+
