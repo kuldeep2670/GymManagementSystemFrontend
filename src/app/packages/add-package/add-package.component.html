@@ -1,0 +1,26 @@
+<p>Add Package</p>
+
+<form [formGroup] = "packageForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="packageName">Package Name </label>
+        <input type="text" class="form-control" id="packageName" name="packageName" formControlName="packageName" required>
+        <div class="text-danger" *ngIf="f.packageName.errors?.['required'] &&(f.packageName.dirty || f.packageName.touched)">Name is required</div>
+        <div class="text-danger" *ngIf="f.packageName.errors?.['minlength'] && (f.packageName.dirty || f.packageName.touched)">Name must be at least 3 characters long</div>
+        <div class="text-danger" *ngIf="f.packageName.errors?.['maxlength'] && (f.packageName.dirty || f.packageName.touched)">Name cannot exceed 20 characters</div>
+    </div>
+    <div class="form-group">
+        <label for="packageFees">Package Fees</label>
+        <input type="number" class="form-control" id="packageFees" name="packageFees" formControlName="packageFees" required>
+        <div class="text-danger" *ngIf="f.packageFees.errors?.['required'] &&(f.packageFees.dirty || f.packageFees.touched)">Package Fees is required</div>
+        <div class="text-danger" *ngIf="f.packageFees.errors?.['min'] && (f.packageFees.dirty || f.packageFees.touched)">Package Fees Cannot Be Less Than 999</div>
+        
+    </div>
+    <div class="form-group">
+        <label for="mealIncluded">Meal Included--</label>
+        <input type="checkbox"  id="mealIncluded" name="mealIncluded" formControlName="mealIncluded" >
+                
+    </div><br>
+    
+
+    <input type="submit" value="Add Package" class="btn btn-primary">
+</form>

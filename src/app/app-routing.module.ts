@@ -14,6 +14,9 @@ import { DeleteTrainerByIDComponent } from './trainer/delete-trainer-by-id/delet
 import { UpdateTrainerByIdComponent } from './trainer/update-trainer-by-id/update-trainer-by-id.component';
 import { PackagesComponent } from './packages/packages.component';
 import { GetAllPackageComponent } from './packages/get-all-package/get-all-package.component';
+import { AddPackageComponent } from './packages/add-package/add-package.component';
+import { GetPackageByIdComponent } from './packages/get-package-by-id/get-package-by-id.component';
+import { UpdatePackageByIdComponent } from './packages/update-package-by-id/update-package-by-id.component';
 
 const routes: Routes = [
   {
@@ -42,7 +45,10 @@ const routes: Routes = [
     path:'package',
     component:PackagesComponent,
     children:[
-      {path:'getall',component:GetAllPackageComponent}
+      {path:'getall',component:GetAllPackageComponent},
+      {path:'add', component:AddPackageComponent},
+      {path:'get', component:GetPackageByIdComponent},
+      {path:'update', component:UpdatePackageByIdComponent}
     ]
   }
 ];
