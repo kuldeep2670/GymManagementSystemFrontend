@@ -1,0 +1,17 @@
+<p>Renewal User Package</p>
+
+<form [formGroup] = "userPackageRenewalForm" (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+        <label for="uid">User ID </label>
+        <input type="number" class="form-control" id="uid" name="uid" formControlName="uid" required>
+        <div class="text-danger" *ngIf="f.uid.errors?.['required'] &&((f.uid.dirty || f.uid.touched))">ID is required</div>
+        <div class="text-danger" *ngIf="f.uid.errors?.['min'] && (f.uid.dirty || f.uid.touched)">ID must be atleast 1</div>
+    </div><br>
+
+    <input type="submit" value="Renewal Package" class="btn btn-primary">
+</form>
+<br><br>
+<div *ngIf="resultString != null">{{resultString}}</div>
+
+

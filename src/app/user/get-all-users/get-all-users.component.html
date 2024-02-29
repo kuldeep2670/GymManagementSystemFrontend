@@ -16,14 +16,14 @@
     </thead>
     <tbody>
         <tr *ngFor = "let user of userList">
-            <td>{{user.id}}</td>
-            <td>{{user.name}}</td>
-            <td>{{user.email}}</td>
-            <td>{{user.phoneNo}}</td>
-            <td>{{user.packageExpiryDate}}</td>
-            <td>{{user.trainer.id}}</td>
-            <td>{{user.packages.packageNo}}</td>
-            <td>{{user.gymAdmin.gymID}}</td>
+            <td>{{user?.id}}</td>
+            <td>{{user?.name}}</td>
+            <td>{{user?.email}}</td>
+            <td>{{user?.phoneNo}}</td>
+            <td>{{user?.packageExpiryDate}}</td>
+            <td>{{user?.trainer?.id}}</td>
+            <td>{{user?.packages?.packageNo}}</td>
+            <td>{{user?.gymAdmin?.gymID}}</td>
             
         </tr>
     </tbody>

@@ -24,6 +24,12 @@ import { AddUserComponent } from './user/add-user/add-user.component';
 import { GetUserByIdComponent } from './user/get-user-by-id/get-user-by-id.component';
 import { UpdateUserByIdComponent } from './user/update-user-by-id/update-user-by-id.component';
 import { DeleteUserByIdComponent } from './user/delete-user-by-id/delete-user-by-id.component';
+import { BusinessComponent } from './business/business.component';
+import { RegisterUserComponent } from './business/register-user/register-user.component';
+import { StartGymComponent } from './business/start-gym/start-gym.component';
+import { UpdateUserPackageComponent } from './business/update-user-package/update-user-package.component';
+import { RenewalUserPackageComponent } from './business/renewal-user-package/renewal-user-package.component';
+import { EntryInGymComponent } from './business/entry-in-gym/entry-in-gym.component';
 
 const routes: Routes = [
   {
@@ -68,6 +74,17 @@ const routes: Routes = [
       {path:'get', component:GetUserByIdComponent},
       {path:'update',component:UpdateUserByIdComponent},
       {path:'delete', component:DeleteUserByIdComponent}
+    ]
+  },
+  {
+    path:'business',
+    component: BusinessComponent,
+    children:[
+      {path:'register-user', component:RegisterUserComponent},
+      {path:'start-gym', component: StartGymComponent},
+      {path:'update-user-package', component: UpdateUserPackageComponent},
+      {path:'renewal', component:RenewalUserPackageComponent},
+      {path:'entry-in-gym', component:EntryInGymComponent}
     ]
   }
 ];

@@ -1,0 +1,32 @@
+<p>Register User</p>
+
+<form [formGroup] = "registerUserForm" (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+        <label for="name"> User Name </label>
+        <input type="text" class="form-control" id="name" name="name" formControlName="name" required>
+        <div class="text-danger" *ngIf="f.name.errors?.['required'] &&(f.name.dirty || f.name.touched)">Name is required</div>
+        <div class="text-danger" *ngIf="f.name.errors?.['minlength'] && (f.name.dirty || f.name.touched)">Name must be at least 3 characters long</div>
+        <div class="text-danger" *ngIf="f.name.errors?.['maxlength'] && (f.name.dirty || f.name.touched)">Name cannot exceed 20 characters</div>
+    </div>
+
+    <div class="form-group">
+        <label for="email"> Email </label>
+        <input type="email" class="form-control" id="email" name="email" formControlName="email" required>
+        <div class="text-danger" *ngIf="f.email.errors?.['required'] &&(f.email.dirty || f.email.touched)">Email is required</div>
+        <div class="text-danger" *ngIf="f.email.errors?.['email'] &&(f.email.dirty || f.email.touched)">Invalid Email format</div>
+
+    </div>
+
+    <div class="form-group">
+        <label for="phoneNo"> Phone No </label>
+        <input type="text" class="form-control" id="phoneNo" name="phoneNo" formControlName="phoneNo" required>
+        <div class="text-danger" *ngIf="f.phoneNo.errors?.['required'] &&(f.phoneNo.dirty || f.phoneNo.touched)">Phone No. is required</div>
+        <div class="text-danger" *ngIf="f.phoneNo.errors?.['minlength'] && (f.phoneNo.dirty || f.phoneNo.touched)">Phone No must be 10 digits</div>
+        <div class="text-danger" *ngIf="f.phoneNo.errors?.['maxlength'] && (f.phoneNo.dirty || f.phoneNo.touched)">Phone No must be 10 digits</div>
+    </div><br>
+
+    <input type="submit" value="Register User" class="btn btn-primary">
+</form>
+
+
