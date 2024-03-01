@@ -1,16 +1,16 @@
 <p>Get Gym by id</p>
 
-<form [formGroup] = "gymIdForm" (ngSubmit)="onSubmit()">
+<form [formGroup] = "gymIdForm" (ngSubmit)="onSubmit()" >
     
-    <div class="form-group">
+    <div >
         <label for="gymID">Gym ID </label>
-        <input type="number" class="form-control" id="gymID" name="gymID" formControlName="gymID" required>
-        <div class="text-danger" *ngIf="f.gymID.errors?.['required'] &&((f.gymID.dirty || f.gymID.touched))">ID is required</div>
+        <input type="number"  id="gymID" name="gymID" formControlName="gymID" required>
+        <div class="text-rose-500" *ngIf="f.gymID.errors?.['required'] &&((f.gymID.dirty || f.gymID.touched))">ID is required</div>
         <div class="text-danger" *ngIf="f.gymID.errors?.['min'] && (f.gymID.dirty || f.gymID.touched)">ID must be atleast 1</div>
         
     </div><br>
 
-    <input type="submit" value="Get Gym Data" class="btn btn-primary">
+    <input type="submit" value="Get Gym Data" >
 </form>  
     <div *ngIf="gym != null">
         <br>

@@ -35,6 +35,7 @@ import { StartGymComponent } from './business/start-gym/start-gym.component';
 import { UpdateUserPackageComponent } from './business/update-user-package/update-user-package.component';
 import { RenewalUserPackageComponent } from './business/renewal-user-package/renewal-user-package.component';
 import { EntryInGymComponent } from './business/entry-in-gym/entry-in-gym.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -68,7 +69,8 @@ import { EntryInGymComponent } from './business/entry-in-gym/entry-in-gym.compon
     StartGymComponent,
     UpdateUserPackageComponent,
     RenewalUserPackageComponent,
-    EntryInGymComponent
+    EntryInGymComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

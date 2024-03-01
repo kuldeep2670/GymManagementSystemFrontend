@@ -25,6 +25,9 @@ export class GetGymAdminByIdComponent {
     this.gymService.getById(ID).subscribe(responseData=>{
       this.gym = responseData;
       console.log(this.gym);
+    },
+    error => {
+      console.error("Error occurred while fetching gym data:", error);
     });
     
   }

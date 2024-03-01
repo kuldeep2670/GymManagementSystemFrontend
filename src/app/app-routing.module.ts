@@ -30,8 +30,10 @@ import { StartGymComponent } from './business/start-gym/start-gym.component';
 import { UpdateUserPackageComponent } from './business/update-user-package/update-user-package.component';
 import { RenewalUserPackageComponent } from './business/renewal-user-package/renewal-user-package.component';
 import { EntryInGymComponent } from './business/entry-in-gym/entry-in-gym.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
+  {path:'',component: HomeComponent },
   {
     path:'gym',
     component:GymComponent,
