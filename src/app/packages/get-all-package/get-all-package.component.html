@@ -1,22 +1,24 @@
-<p>List of Packages</p>
+<p class="component-heading">List of Packages</p>
 
-<table >
-    <thead>
-        <tr>
-            <th>Package No</th>
-            <th>Package Name</th>
-            <th>Package Fees</th>
-            <th>Meal Included</th>
-            
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor = "let package of packageList">
-            <td>{{package.packageNo}}</td>
-            <td>{{package.packageName}}</td>
-            <td>{{package.packageFees}}</td>
-            <td>{{package.mealIncluded}}</td>
-            
-        </tr>
-    </tbody>
-</table>
+<div class="display-all ">
+    <table class="w-auto text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400   shadow-md sm:rounded-lg" >
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th class="px-6 py-3">Package No</th>
+                <th class="px-6 py-3">Package Name</th>
+                <th class="px-6 py-3">Package Fees</th>
+                <th class="px-6 py-3">Meal Included</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let package of packageList" class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4">{{package.packageNo}}</td>
+                <td class="px-6 py-4">{{package.packageName}}</td>
+                <td class="px-6 py-4">{{package.packageFees}}</td>
+                <td class="px-6 py-4">{{package.mealIncluded}}</td>
+                
+            </tr>
+        </tbody>
+    </table>
+</div>

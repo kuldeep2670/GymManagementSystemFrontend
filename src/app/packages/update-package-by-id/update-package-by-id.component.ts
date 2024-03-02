@@ -36,6 +36,7 @@ export class UpdatePackageByIdComponent {
 
     this.packageService.update(ID, this.packages).subscribe(responseData=>{
       console.log(responseData);
+      alert(responseData);
     })
   }
 

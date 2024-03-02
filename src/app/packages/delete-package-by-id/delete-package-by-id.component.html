@@ -1,15 +1,22 @@
-<p>Delete Package by id</p>
 
-<form [formGroup] = "packageIdForm" (ngSubmit)="onSubmit()">
+<div class="form-section">
+
+    <div class="forms">
+
+        <p class="component-heading">Delete Package by id</p>
+        <form [formGroup] = "packageIdForm" (ngSubmit)="onSubmit()">
     
-    <div class="form-group">
-        <label for="packageNo">Package No </label>
-        <input type="number" class="form-control" id="packageNo" name="packageNo" formControlName="packageNo" required>
-        <div class="text-danger" *ngIf="f.packageNo.errors?.['required'] &&((f.packageNo.dirty || f.packageNo.touched))">Package No is required</div>
-        <div class="text-danger" *ngIf="f.packageNo.errors?.['min'] && (f.packageNo.dirty || f.packageNo.touched)">Package No must be atleast 1</div>
+            <div >
+                <label for="packageNo" class="leading-7 text-sm text-gray-600">Package No </label>
+                <input type="number" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" id="packageNo" name="packageNo" formControlName="packageNo" required>
+                <div class="text-red-500" *ngIf="f.packageNo.errors?.['required'] &&((f.packageNo.dirty || f.packageNo.touched))">Package No is required</div>
+                <div class="text-red-500" *ngIf="f.packageNo.errors?.['min'] && (f.packageNo.dirty || f.packageNo.touched)">Package No must be atleast 1</div>
+                
+            </div><br>
         
-    </div><br>
+            <input type="submit" value="Delete Package" class="text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg">
+            
+        </form>
 
-    <input type="submit" value="Get Package Data" class="btn btn-primary">
-    
-</form>
+    </div>
+</div>

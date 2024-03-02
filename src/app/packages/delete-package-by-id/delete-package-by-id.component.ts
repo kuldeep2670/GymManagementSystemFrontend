@@ -22,6 +22,7 @@ export class DeletePackageByIdComponent {
     this.packageService.deleteById(ID).subscribe((responseData)=>{
     
       console.log(responseData);
+      alert(responseData);
       this.goToPackageList();
 
     })
