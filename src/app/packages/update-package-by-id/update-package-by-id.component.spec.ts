@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UpdatePackageByIdComponent } from './update-package-by-id.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { ReactiveFormsModule } from '@angular/forms';
 
 describe('UpdatePackageByIdComponent', () => {
   let component: UpdatePackageByIdComponent;
@@ -8,7 +10,8 @@ describe('UpdatePackageByIdComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [UpdatePackageByIdComponent]
+      declarations: [UpdatePackageByIdComponent],
+      imports:[HttpClientTestingModule, ReactiveFormsModule]
     })
     .compileComponents();
     

@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { GetAllPackageComponent } from './get-all-package.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { ReactiveFormsModule } from '@angular/forms';
 
 describe('GetAllPackageComponent', () => {
   let component: GetAllPackageComponent;
@@ -8,7 +10,8 @@ describe('GetAllPackageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [GetAllPackageComponent]
+      declarations: [GetAllPackageComponent],
+      imports:[HttpClientTestingModule, ReactiveFormsModule]
     })
     .compileComponents();
     
