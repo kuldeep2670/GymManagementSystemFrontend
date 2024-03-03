@@ -12,9 +12,9 @@
                 <th class="px-6 py-3">Email</th>
                 <th class="px-6 py-3">Phone No.</th>
                 <th class="px-6 py-3">Package Expiry Date</th>
-                <th class="px-6 py-3">Trainer ID</th>
-                <th class="px-6 py-3">Package ID</th>
-                <th class="px-6 py-3">Gym ID</th>
+                <th class="px-6 py-3">Trainer Name</th>
+                <th class="px-6 py-3">Package Name</th>
+                <th class="px-6 py-3">Gym Name</th>
                 
             </tr>
         </thead>
@@ -26,9 +26,9 @@
                 <td class="px-6 py-4">{{user?.email}}</td>
                 <td class="px-6 py-4">{{user?.phoneNo}}</td>
                 <td class="px-6 py-4">{{user?.packageExpiryDate}}</td>
-                <td class="px-6 py-4">{{user?.trainer?.id}}</td>
-                <td class="px-6 py-4">{{user?.packages?.packageNo}}</td>
-                <td class="px-6 py-4">{{user?.gymAdmin?.gymID}}</td>
+                <td class="px-6 py-4">{{user?.trainer?.trainerName}}</td>
+                <td class="px-6 py-4">{{user?.packages?.packageName}}</td>
+                <td class="px-6 py-4">{{user?.gymAdmin?.name}}</td>
                 
             </tr>
         </tbody>
