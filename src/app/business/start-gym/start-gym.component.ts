@@ -34,6 +34,7 @@ export class StartGymComponent {
 
     this.businessService.startGym(ID, gymId,trainerId,packageId).subscribe(responseData=>{
       console.log(responseData);
+      alert(responseData);
     })
   }
 }

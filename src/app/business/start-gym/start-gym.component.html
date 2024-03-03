@@ -1,35 +1,43 @@
-<p>Start Gym</p>
 
-<form [formGroup] = "startGymForm" (ngSubmit)="onSubmit()">
+<div class="form-section">
 
-    <div class="form-group">
-        <label for="uid">User ID </label>
-        <input type="number" class="form-control" id="uid" name="uid" formControlName="uid" required>
-        <div class="text-danger" *ngIf="f.uid.errors?.['required'] &&((f.uid.dirty || f.uid.touched))">ID is required</div>
-        <div class="text-danger" *ngIf="f.uid.errors?.['min'] && (f.uid.dirty || f.uid.touched)">ID must be atleast 1</div>
-    </div>
-    
-    <div class="form-group">
-        <label for="id">Trainer ID </label>
-        <input type="number" class="form-control" id="id" name="id" formControlName="id" required>
-        <div class="text-danger" *ngIf="f.id.errors?.['required'] &&((f.id.dirty || f.id.touched))">ID is required</div>
-        <div class="text-danger" *ngIf="f.id.errors?.['min'] && (f.id.dirty || f.id.touched)">ID must be atleast 1</div>
-    </div>
-    <div class="form-group">
-        <label for="packageNo"> Package ID</label>
-        <input type="number" class="form-control" id="packageNo" name="packageNo" formControlName="packageNo" required>
-        <div class="text-danger" *ngIf="f.packageNo.errors?.['required'] &&((f.packageNo.dirty || f.packageNo.touched))">ID is required</div>
-        <div class="text-danger" *ngIf="f.packageNo.errors?.['min'] && (f.packageNo.dirty || f.packageNo.touched)">ID must be atleast 1</div>
-    </div>
-    <div class="form-group">
-        <label for="gymID"> Gym ID </label>
-        <input type="number" class="form-control" id="gymID" name="gymID" formControlName="gymID" required>
-        <div class="text-danger" *ngIf="f.gymID.errors?.['required'] &&((f.gymID.dirty || f.gymID.touched))">ID is required</div>
-        <div class="text-danger" *ngIf="f.gymID.errors?.['min'] && (f.gymID.dirty || f.gymID.touched)">ID must be atleast 1</div>
-    </div><br>
+    <div class="forms">
 
-    <input type="submit" value="Start Gym" class="btn btn-primary">
-</form>
+        <p class="component-heading">Start Gym</p>
+        <form [formGroup] = "startGymForm" (ngSubmit)="onSubmit()">
+
+            <div >
+                <label for="uid" class="leading-7 text-sm text-gray-600">User ID </label>
+                <input type="number" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" id="uid" name="uid" formControlName="uid" required>
+                <div class="text-red-500" *ngIf="f.uid.errors?.['required'] &&((f.uid.dirty || f.uid.touched))">ID is required</div>
+                <div class="text-red-500" *ngIf="f.uid.errors?.['min'] && (f.uid.dirty || f.uid.touched)">ID must be atleast 1</div>
+            </div>
+            
+            <div >
+                <label for="id" class="leading-7 text-sm text-gray-600">Trainer ID </label>
+                <input type="number" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" id="id" name="id" formControlName="id" required>
+                <div class="text-red-500" *ngIf="f.id.errors?.['required'] &&((f.id.dirty || f.id.touched))">ID is required</div>
+                <div class="text-red-500" *ngIf="f.id.errors?.['min'] && (f.id.dirty || f.id.touched)">ID must be atleast 1</div>
+            </div>
+            <div >
+                <label for="packageNo" class="leading-7 text-sm text-gray-600"> Package ID</label>
+                <input type="number" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" id="packageNo" name="packageNo" formControlName="packageNo" required>
+                <div class="text-red-500" *ngIf="f.packageNo.errors?.['required'] &&((f.packageNo.dirty || f.packageNo.touched))">ID is required</div>
+                <div class="text-red-500" *ngIf="f.packageNo.errors?.['min'] && (f.packageNo.dirty || f.packageNo.touched)">ID must be atleast 1</div>
+            </div>
+            <div >
+                <label for="gymID" class="leading-7 text-sm text-gray-600"> Gym ID </label>
+                <input type="number" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" id="gymID" name="gymID" formControlName="gymID" required>
+                <div class="text-red-500" *ngIf="f.gymID.errors?.['required'] &&((f.gymID.dirty || f.gymID.touched))">ID is required</div>
+                <div class="text-red-500" *ngIf="f.gymID.errors?.['min'] && (f.gymID.dirty || f.gymID.touched)">ID must be atleast 1</div>
+            </div><br>
+        
+            <input type="submit" value="Start Gym" class="text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg">
+        </form>
+    </div>
+</div>
+
+
 
 
 

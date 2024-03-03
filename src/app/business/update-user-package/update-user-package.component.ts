@@ -31,6 +31,7 @@ export class UpdateUserPackageComponent {
 
     this.businessService.updateUserPackage(ID, packageID).subscribe(responseData=>{
       console.log(responseData);
+      alert(responseData);
     })
   }
 }

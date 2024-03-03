@@ -1,4 +1,4 @@
-
+<!-- 
 <ul>
   <li><a routerLink="/business/register-user">Register User</a></li>
   <li><a routerLink="/business/start-gym">Start Gym</a></li>
@@ -8,4 +8,35 @@
 
 </ul>
 <hr />
+<router-outlet></router-outlet> -->
+<div class="package-nav">
+  <a routerLink="/business/register-user">
+    <button class="bg-[#ffdab9] hover:bg-[#E2BE9E] text-gray-900 font-bold py-2 px-4 border border-gray-700 rounded">
+      Register User
+    </button>
+  </a>
+  <a routerLink="/business/start-gym">
+    <button class="bg-[#ffdab9] hover:bg-[#E2BE9E] text-gray-900 font-bold py-2 px-4 border border-gray-700 rounded">
+      Start Gym
+    </button>
+  </a>
+  <a routerLink="/business/update-user-package">
+    <button class="bg-[#ffdab9] hover:bg-[#E2BE9E] text-gray-900 font-bold py-2 px-4 border border-gray-700 rounded">
+      Update User Package
+    </button>
+  </a>
+  <a routerLink="/business/renewal">
+    <button class="bg-[#ffdab9] hover:bg-[#E2BE9E] text-gray-900 font-bold py-2 px-4 border border-gray-700 rounded">
+      Renewal User Package
+    </button>
+  </a>
+  <a routerLink="/business/entry-in-gym">
+    <button class="bg-[#ffdab9] hover:bg-[#E2BE9E] text-gray-900 font-bold py-2 px-4 border border-gray-700 rounded">
+      Entry in Gym
+    </button>
+  </a>
+</div>
+
+<hr />
+
 <router-outlet></router-outlet>

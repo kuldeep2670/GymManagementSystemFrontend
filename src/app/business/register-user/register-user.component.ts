@@ -36,6 +36,7 @@ export class RegisterUserComponent {
 
     this.businessService.registerUser(uname, uemail, uphone).subscribe(responseData=>{
       console.log(responseData);
+      alert(responseData);
     })
   }
 }
