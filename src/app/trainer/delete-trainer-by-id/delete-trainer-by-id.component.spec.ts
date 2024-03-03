@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DeleteTrainerByIDComponent } from './delete-trainer-by-id.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { ReactiveFormsModule } from '@angular/forms';
 
 describe('DeleteTrainerByIDComponent', () => {
   let component: DeleteTrainerByIDComponent;
@@ -8,7 +10,8 @@ describe('DeleteTrainerByIDComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [DeleteTrainerByIDComponent]
+      declarations: [DeleteTrainerByIDComponent],
+      imports:[HttpClientTestingModule, ReactiveFormsModule]
     })
     .compileComponents();
     
