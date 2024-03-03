@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RenewalUserPackageComponent } from './renewal-user-package.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { ReactiveFormsModule } from '@angular/forms';
 
 describe('RenewalUserPackageComponent', () => {
   let component: RenewalUserPackageComponent;
@@ -8,7 +10,8 @@ describe('RenewalUserPackageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [RenewalUserPackageComponent]
+      declarations: [RenewalUserPackageComponent],
+      imports:[HttpClientTestingModule, ReactiveFormsModule]
     })
     .compileComponents();
     
