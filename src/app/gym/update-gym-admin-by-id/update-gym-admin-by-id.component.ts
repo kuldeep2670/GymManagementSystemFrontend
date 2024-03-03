@@ -32,6 +32,7 @@ export class UpdateGymAdminByIdComponent {
 
     this.gymService.update(ID, this.gym).subscribe(responseData=>{
       console.log(responseData);
+      alert(responseData);
     })
   }
 

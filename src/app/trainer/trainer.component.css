@@ -1,0 +1,12 @@
+.package-nav{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+button{
+    margin:2px;
+}

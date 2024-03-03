@@ -1,14 +1,23 @@
-<p>Delete Trainer by Id</p>
-<form [formGroup] = "trainerIdForm" (ngSubmit)="onSubmit()">
-    
-    <div class="form-group">
-        <label for="id">Trainer ID </label>
-        <input type="number" class="form-control" id="id" name="id" formControlName="id" required>
-        <div class="text-danger" *ngIf="f.id.errors?.['required'] &&((f.id.dirty || f.id.touched))">ID is required</div>
-        <div class="text-danger" *ngIf="f.id.errors?.['min'] && (f.id.dirty || f.id.touched)">ID must be atleast 1</div>
-        
-    </div><br>
 
-    <input type="submit" value="Delete Trainer" class="btn btn-primary">
+<div class="form-section">
+
+    <div class="forms">
+
+        <p class="component-heading">Delete Trainer by Id</p>
+        <form [formGroup] = "trainerIdForm" (ngSubmit)="onSubmit()">
     
-</form>
+            <div >
+                <label for="id" class="leading-7 text-sm text-gray-600">Trainer ID </label>
+                <input type="number" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" id="id" name="id" formControlName="id" required>
+                <div class="text-red-500" *ngIf="f.id.errors?.['required'] &&((f.id.dirty || f.id.touched))">ID is required</div>
+                <div class="text-red-500" *ngIf="f.id.errors?.['min'] && (f.id.dirty || f.id.touched)">ID must be atleast 1</div>
+                
+            </div><br>
+        
+            <input type="submit" value="Delete Trainer" class="text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg">
+            
+        </form>
+    </div>
+</div>
+
+

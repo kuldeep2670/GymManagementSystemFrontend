@@ -1,4 +1,4 @@
-<ul>
+<!-- <ul>
   <li><a routerLink="/trainer/getall">Get All Trainers</a></li>
   <li><a routerLink="/trainer/add">Add Trainer</a></li>
   <li><a routerLink="/trainer/get">Get Trainer by id</a></li>
@@ -6,4 +6,37 @@
   <li><a routerLink="/trainer/update">Update Trainer by id</a></li> 
 </ul>
 <hr />
+<router-outlet></router-outlet> -->
+
+
+<div class="package-nav">
+  <a routerLink="/trainer/getall">
+    <button class="bg-[#ffdab9] hover:bg-[#E2BE9E] text-gray-900 font-bold py-2 px-4 border border-gray-700 rounded">
+      Get All Trainers
+    </button>
+  </a>
+  <a routerLink="/trainer/add">
+    <button class="bg-[#ffdab9] hover:bg-[#E2BE9E] text-gray-900 font-bold py-2 px-4 border border-gray-700 rounded">
+      Add Trainer
+    </button>
+  </a>
+  <a routerLink="/trainer/get">
+    <button class="bg-[#ffdab9] hover:bg-[#E2BE9E] text-gray-900 font-bold py-2 px-4 border border-gray-700 rounded">
+      Get Trainer by id
+    </button>
+  </a>
+  <a routerLink="/trainer/update">
+    <button class="bg-[#ffdab9] hover:bg-[#E2BE9E] text-gray-900 font-bold py-2 px-4 border border-gray-700 rounded">
+      Update Trainer by id
+    </button>
+  </a>
+  <a routerLink="/trainer/delete">
+    <button class="bg-[#ffdab9] hover:bg-[#E2BE9E] text-gray-900 font-bold py-2 px-4 border border-gray-700 rounded">
+      Delete Trainer by id
+    </button>
+  </a>
+</div>
+
+<hr />
+
 <router-outlet></router-outlet>

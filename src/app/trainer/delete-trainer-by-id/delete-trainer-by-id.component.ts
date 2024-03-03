@@ -23,6 +23,7 @@ export class DeleteTrainerByIDComponent {
     this.trainerService.deleteById(ID).subscribe((responseData)=>{
     
       console.log(responseData);
+      alert(responseData);
       this.goToTrainerList();
 
     })

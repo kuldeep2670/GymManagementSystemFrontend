@@ -1,27 +1,33 @@
-<p>Update gym by id</p>
 
-<form [formGroup] = "gymForm" (ngSubmit)="onSubmit()">
+<div class="form-section">
+
+    <div class="forms">
+
+        <p class="component-heading">Update gym by id</p>
+        <form [formGroup] = "gymForm" (ngSubmit)="onSubmit()">
     
-    <div class="form-group">
-        <label for="gymID">Gym ID </label>
-        <input type="number" class="form-control" id="gymID" name="gymID" formControlName="gymID" required>
-        <div class="text-danger" *ngIf="f.gymID.errors?.['required'] &&((f.gymID.dirty || f.gymID.touched))">ID is required</div>
-        <div class="text-danger" *ngIf="f.gymID.errors?.['min'] && (f.gymID.dirty || f.gymID.touched)">ID must be atleast 1</div>
+            <div >
+                <label for="gymID" class="leading-7 text-sm text-gray-600">Gym ID </label>
+                <input type="number" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" id="gymID" name="gymID" formControlName="gymID" required>
+                <div class="text-red-500" *ngIf="f.gymID.errors?.['required'] &&((f.gymID.dirty || f.gymID.touched))">ID is required</div>
+                <div class="text-red-500" *ngIf="f.gymID.errors?.['min'] && (f.gymID.dirty || f.gymID.touched)">ID must be atleast 1</div>
+            </div>
+            <div >
+                <label for="name" class="leading-7 text-sm text-gray-600">New Name </label>
+                <input type="text" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" id="name" name="name" formControlName="name" required>
+                <div class="text-red-500" *ngIf="f.name.errors?.['required'] &&(f.name.dirty || f.name.touched)">Name is required</div>
+                <div class="text-red-500" *ngIf="f.name.errors?.['minlength'] && (f.name.dirty || f.name.touched)">Name must be at least 3 characters long</div>
+                <div class="text-red-500" *ngIf="f.name.errors?.['maxlength'] && (f.name.dirty || f.name.touched)">Name cannot exceed 20 characters</div>
+            </div>
+            <div >
+                <label for="location" class="leading-7 text-sm text-gray-600">New Location </label>
+                <input type="text" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" id="location" name="location" formControlName="location" required>
+                <div class="text-red-500" *ngIf="f.location.errors?.['required'] &&(f.location.dirty || f.location.touched)">Location is required</div>
+                <div class="text-red-500" *ngIf="f.location.errors?.['minlength'] && (f.location.dirty || f.location.touched)">Location must be at least 3 characters long</div>
+                <div class="text-red-500" *ngIf="f.location.errors?.['maxlength'] && (f.location.dirty || f.location.touched)">Location cannot exceed 20 characters</div>
+            </div><br>
+            <input type="submit" value="Update Gym Data" class="text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg">
+            
+        </form>
     </div>
-    <div class="form-group">
-        <label for="name">New Name </label>
-        <input type="text" class="form-control" id="name" name="name" formControlName="name" required>
-        <div class="text-danger" *ngIf="f.name.errors?.['required'] &&(f.name.dirty || f.name.touched)">Name is required</div>
-        <div class="text-danger" *ngIf="f.name.errors?.['minlength'] && (f.name.dirty || f.name.touched)">Name must be at least 3 characters long</div>
-        <div class="text-danger" *ngIf="f.name.errors?.['maxlength'] && (f.name.dirty || f.name.touched)">Name cannot exceed 20 characters</div>
-    </div>
-    <div class="form-group">
-        <label for="location">New Location </label>
-        <input type="text" class="form-control" id="location" name="location" formControlName="location" required>
-        <div class="text-danger" *ngIf="f.location.errors?.['required'] &&(f.location.dirty || f.location.touched)">Location is required</div>
-        <div class="text-danger" *ngIf="f.location.errors?.['minlength'] && (f.location.dirty || f.location.touched)">Location must be at least 3 characters long</div>
-        <div class="text-danger" *ngIf="f.location.errors?.['maxlength'] && (f.location.dirty || f.location.touched)">Location cannot exceed 20 characters</div>
-    </div><br>
-    <input type="submit" value="Update Gym Data" class="btn btn-primary">
-    
-</form>
+</div>

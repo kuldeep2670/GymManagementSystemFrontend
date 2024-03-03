@@ -1,32 +1,41 @@
-<p>Add Trainer</p>
 
-<form [formGroup] = "trainerForm" (ngSubmit)="onSubmit()">
-    <div class="form-group">
-        <label for="name">Trainer Name </label>
-        <input type="text" class="form-control" id="name" name="name" formControlName="trainerName" required>
-        <div class="text-danger" *ngIf="f.trainerName.errors?.['required'] &&(f.trainerName.dirty || f.trainerName.touched)">Name is required</div>
-        <div class="text-danger" *ngIf="f.trainerName.errors?.['minlength'] && (f.trainerName.dirty || f.trainerName.touched)">Name must be at least 3 characters long</div>
-        <div class="text-danger" *ngIf="f.trainerName.errors?.['maxlength'] && (f.trainerName.dirty || f.trainerName.touched)">Name cannot exceed 20 characters</div>
-    </div>
-    <div class="form-group">
-        <label for="phoneNo">Phone No </label>
-        <input type="text" class="form-control" id="phoneNo" name="phoneNo" formControlName="phoneNo" required>
-        <div class="text-danger" *ngIf="f.phoneNo.errors?.['required'] &&(f.phoneNo.dirty || f.phoneNo.touched)">Phone No. is required</div>
-        <div class="text-danger" *ngIf="f.phoneNo.errors?.['minlength'] && (f.phoneNo.dirty || f.phoneNo.touched)">Phone No must be 10 digits</div>
-        <div class="text-danger" *ngIf="f.phoneNo.errors?.['maxlength'] && (f.phoneNo.dirty || f.phoneNo.touched)">Phone No must be 10 digits</div>
-    </div>
-    <div class="form-group">
-        <label for="specialization">Specialization </label>
-        <input type="text" class="form-control" id="specialization" name="specialization" formControlName="specialization" required>
-        <div class="text-danger" *ngIf="f.specialization.errors?.['required'] &&(f.specialization.dirty || f.specialization.touched)">Specialization is required</div>        
-    </div>
-    
-    <div class="form-group">
-        <label for="gymID">Gym ID </label>
-        <input type="number" class="form-control" id="gymID" name="gymID" formControlName="gymID" required>
-        <div class="text-danger" *ngIf="f.gymID.errors?.['required'] &&((f.gymID.dirty || f.gymID.touched))">ID is required</div>
-        <div class="text-danger" *ngIf="f.gymID.errors?.['min'] && (f.gymID.dirty || f.gymID.touched)">ID must be atleast 1</div>
-    </div><br>
+<div class="form-section">
 
-    <input type="submit" value="Add Trainer" class="btn btn-primary">
-</form>
+    <div class="forms">
+
+        <p class="component-heading">Add Trainer</p>
+        <form [formGroup] = "trainerForm" (ngSubmit)="onSubmit()">
+            <div>
+                <label for="name" class="leading-7 text-sm text-gray-600">Trainer Name </label>
+                <input type="text" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" id="name" name="name" formControlName="trainerName" required>
+                <div class="text-red-500" *ngIf="f.trainerName.errors?.['required'] &&(f.trainerName.dirty || f.trainerName.touched)">Name is required</div>
+                <div class="text-red-500" *ngIf="f.trainerName.errors?.['minlength'] && (f.trainerName.dirty || f.trainerName.touched)">Name must be at least 3 characters long</div>
+                <div class="text-red-500" *ngIf="f.trainerName.errors?.['maxlength'] && (f.trainerName.dirty || f.trainerName.touched)">Name cannot exceed 20 characters</div>
+            </div>
+            <div >
+                <label for="phoneNo" class="leading-7 text-sm text-gray-600">Phone No </label>
+                <input type="text" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" id="phoneNo" name="phoneNo" formControlName="phoneNo" required>
+                <div class="text-red-500" *ngIf="f.phoneNo.errors?.['required'] &&(f.phoneNo.dirty || f.phoneNo.touched)">Phone No. is required</div>
+                <div class="text-red-500" *ngIf="f.phoneNo.errors?.['minlength'] && (f.phoneNo.dirty || f.phoneNo.touched)">Phone No must be 10 digits</div>
+                <div class="text-red-500" *ngIf="f.phoneNo.errors?.['maxlength'] && (f.phoneNo.dirty || f.phoneNo.touched)">Phone No must be 10 digits</div>
+            </div>
+            <div >
+                <label for="specialization" class="leading-7 text-sm text-gray-600">Specialization </label>
+                <input type="text" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" id="specialization" name="specialization" formControlName="specialization" required>
+                <div class="text-red-500" *ngIf="f.specialization.errors?.['required'] &&(f.specialization.dirty || f.specialization.touched)">Specialization is required</div>        
+            </div>
+            
+            <div >
+                <label for="gymID" class="leading-7 text-sm text-gray-600">Gym ID </label>
+                <input type="number" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" id="gymID" name="gymID" formControlName="gymID" required>
+                <div class="text-red-500" *ngIf="f.gymID.errors?.['required'] &&((f.gymID.dirty || f.gymID.touched))">ID is required</div>
+                <div class="text-red-500" *ngIf="f.gymID.errors?.['min'] && (f.gymID.dirty || f.gymID.touched)">ID must be atleast 1</div>
+            </div><br>
+        
+            <input type="submit" value="Add Trainer" class="text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg">
+        </form>
+
+    </div>
+</div>
+
+

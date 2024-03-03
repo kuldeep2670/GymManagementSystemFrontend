@@ -1,25 +1,29 @@
 
-<p>List of Trainers</p>
+<p class="component-heading">List of Trainers</p>
 
-<table >
-    <thead>
-        <tr>
-            <th>Trainer ID</th>
-            <th>Trainer Name</th>
-            <th>Trainer PhoneNo.</th>
-            <th>Trainer Specialization</th>
-            <th>Gym Id</th>
-            <th>Gym Name</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor = "let trainer of trainerList">
-            <td>{{trainer.id}}</td>
-            <td>{{trainer.trainerName}}</td>
-            <td>{{trainer.phoneNo}}</td>
-            <td>{{trainer.specialization}}</td>
-            <td>{{trainer.gymAdmin.gymID}}</td>
-            <td>{{trainer.gymAdmin.name}}</td>
-        </tr>
-    </tbody>
-</table>
+<div class="display-all ">
+    <table class="w-auto text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400   shadow-md sm:rounded-lg" >
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th class="px-6 py-3">Trainer ID</th>
+                <th class="px-6 py-3">Trainer Name</th>
+                <th class="px-6 py-3">Trainer PhoneNo.</th>
+                <th class="px-6 py-3">Trainer Specialization</th>
+                <th class="px-6 py-3">Gym Id</th>
+                <th class="px-6 py-3">Gym Name</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let trainer of trainerList" class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4">{{trainer.id}}</td>
+                <td class="px-6 py-4">{{trainer.trainerName}}</td>
+                <td class="px-6 py-4">{{trainer.phoneNo}}</td>
+                <td class="px-6 py-4">{{trainer.specialization}}</td>
+                <td class="px-6 py-4">{{trainer.gymAdmin.gymID}}</td>
+                <td class="px-6 py-4">{{trainer.gymAdmin.name}}</td>
+                
+            </tr>
+        </tbody>
+    </table>
+</div>

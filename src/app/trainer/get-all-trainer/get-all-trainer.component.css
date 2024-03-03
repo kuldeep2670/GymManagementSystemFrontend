@@ -1,8 +1,13 @@
-table,tr,td,th{
-    border: 1px solid black;
+.component-heading{
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: x-large;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
 }
 
-td,th{
-    padding: 5px;
-    text-align: center;
+.display-all{
+    display: flex;
+    justify-content: center;
 }

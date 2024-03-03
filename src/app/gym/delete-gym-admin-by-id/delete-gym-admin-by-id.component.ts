@@ -23,6 +23,7 @@ export class DeleteGymAdminByIdComponent {
     this.gymService.deleteById(ID).subscribe((responseData)=>{
     
       console.log(responseData);
+      alert(responseData);
       this.goToGymList();
 
     })

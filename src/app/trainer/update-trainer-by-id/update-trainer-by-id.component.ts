@@ -37,6 +37,7 @@ export class UpdateTrainerByIdComponent {
 
     this.trainerService.update(ID, this.trainer).subscribe(responseData=>{
       console.log(responseData);
+      alert(responseData);
     })
   }
 

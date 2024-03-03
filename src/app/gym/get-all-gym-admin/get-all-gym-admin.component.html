@@ -1,18 +1,25 @@
-<p>List of Gyms</p>
 
-<table >
-    <thead>
-        <tr>
-            <th>Gym ID</th>
-            <th>Gym Name</th>
-            <th>Gym Location</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor = "let gym of gymList">
-            <td>{{gym.gymID}}</td>
-            <td>{{gym.name}}</td>
-            <td>{{gym.location}}</td>
-        </tr>
-    </tbody>
-</table>
+
+<p class="component-heading">List of Gyms</p>
+
+<div class="display-all ">
+    <table class="w-auto text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400   shadow-md sm:rounded-lg" >
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th class="px-6 py-3">Gym ID</th>
+                <th class="px-6 py-3">Gym Name</th>
+                <th class="px-6 py-3">Gym Location</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let gym of gymList" class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4">{{gym.gymID}}</td>
+                <td class="px-6 py-4">{{gym.name}}</td>
+                <td class="px-6 py-4">{{gym.location}}</td>
+                
+                
+            </tr>
+        </tbody>
+    </table>
+</div>
