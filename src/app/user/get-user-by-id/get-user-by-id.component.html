@@ -1,27 +1,34 @@
-<p>Get User by id</p>
 
-<form [formGroup] = "userIdForm" (ngSubmit)="onSubmit()">
+<div class="form-section">
+
+    <div class="forms">
+
+        <p class="component-heading">Get User by id</p>
+        <form [formGroup] = "userIdForm" (ngSubmit)="onSubmit()">
     
-    <div class="form-group">
-        <label for="id">User ID </label>
-        <input type="number" class="form-control" id="id" name="id" formControlName="id" required>
-        <div class="text-danger" *ngIf="f.id.errors?.['required'] &&((f.id.dirty || f.id.touched))">ID is required</div>
-        <div class="text-danger" *ngIf="f.id.errors?.['min'] && (f.id.dirty || f.id.touched)">ID must be atleast 1</div>
+            <div >
+                <label for="id" class="leading-7 text-sm text-gray-600">User ID </label>
+                <input type="number" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" id="id" name="id" formControlName="id" required>
+                <div class="text-red-500" *ngIf="f.id.errors?.['required'] &&((f.id.dirty || f.id.touched))">ID is required</div>
+                <div class="text-red-500" *ngIf="f.id.errors?.['min'] && (f.id.dirty || f.id.touched)">ID must be atleast 1</div>
+                
+            </div><br>
         
-    </div><br>
-
-    <input type="submit" value="Get User Data" class="btn btn-primary">
-    
-</form>
-<div *ngIf="user != null">
-    <br>
-    <div>User id: {{user.id}}</div>
-    <div>Name: {{user.name}}</div>
-    <div>Email: {{user.email}}</div>
-    <div>Phone No.: {{user.phoneNo}}</div>
-    <div>Package Expiry Date: {{user.packageExpiryDate}}</div>
-    <div>Package Id: {{user.packages.packageNo}}</div>
-    <div>Trainer Id: {{user.trainer.id}}</div>
-    <div>Gym Id: {{user.gymAdmin.gymID}}</div>
-    
+            <input type="submit" value="Get User Data" class="text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg">
+            
+        </form>
+        <div *ngIf="user != null" class="shown-data">
+            <div><b>User id:</b> {{user.id}}</div>
+            <div><b>Name:</b> {{user.name}}</div>
+            <div><b>Email:</b> {{user.email}}</div>
+            <div><b>Phone No.:</b> {{user.phoneNo}}</div>
+            <div><b>Package Expiry Date:</b> {{user.packageExpiryDate}}</div>
+            <div><b>Package Id:Package Id:</b> {{user.packages.packageNo}}</div>
+            <div><b>Trainer Id:</b> {{user.trainer.id}}</div>
+            <div><b>Gym Id:</b> {{user.gymAdmin.gymID}}</div>
+            
+        </div>
+    </div>
 </div>
+
+

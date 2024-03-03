@@ -40,6 +40,7 @@ export class UpdateUserByIdComponent {
 
     this.userService.update(ID, this.user).subscribe(responseData=>{
       console.log(responseData);
+      alert(responseData);
     })
   }
 }

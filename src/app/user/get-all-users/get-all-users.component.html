@@ -1,30 +1,36 @@
 
-<p>List of Users</p>
 
-<table >
-    <thead>
-        <tr>
-            <th>User ID</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Phone No.</th>
-            <th>Package Expiry Date</th>
-            <th>Trainer ID</th>
-            <th>Package ID</th>
-            <th>Gym ID</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor = "let user of userList">
-            <td>{{user?.id}}</td>
-            <td>{{user?.name}}</td>
-            <td>{{user?.email}}</td>
-            <td>{{user?.phoneNo}}</td>
-            <td>{{user?.packageExpiryDate}}</td>
-            <td>{{user?.trainer?.id}}</td>
-            <td>{{user?.packages?.packageNo}}</td>
-            <td>{{user?.gymAdmin?.gymID}}</td>
-            
-        </tr>
-    </tbody>
-</table>
+<p class="component-heading">List of Users</p>
+
+<div class="display-all ">
+    <table class="w-auto text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400   shadow-md sm:rounded-lg" >
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                
+                <th class="px-6 py-3">User ID</th>
+                <th class="px-6 py-3">Name</th>
+                <th class="px-6 py-3">Email</th>
+                <th class="px-6 py-3">Phone No.</th>
+                <th class="px-6 py-3">Package Expiry Date</th>
+                <th class="px-6 py-3">Trainer ID</th>
+                <th class="px-6 py-3">Package ID</th>
+                <th class="px-6 py-3">Gym ID</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let user of userList" class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                
+                <td class="px-6 py-4">{{user?.id}}</td>
+                <td class="px-6 py-4">{{user?.name}}</td>
+                <td class="px-6 py-4">{{user?.email}}</td>
+                <td class="px-6 py-4">{{user?.phoneNo}}</td>
+                <td class="px-6 py-4">{{user?.packageExpiryDate}}</td>
+                <td class="px-6 py-4">{{user?.trainer?.id}}</td>
+                <td class="px-6 py-4">{{user?.packages?.packageNo}}</td>
+                <td class="px-6 py-4">{{user?.gymAdmin?.gymID}}</td>
+                
+            </tr>
+        </tbody>
+    </table>
+</div>

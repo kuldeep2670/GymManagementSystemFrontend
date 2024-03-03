@@ -1,49 +1,57 @@
-<p>Add User</p>
 
-<form [formGroup] = "userForm" (ngSubmit)="onSubmit()">
-    <div class="form-group">
-        <label for="name">User Name </label>
-        <input type="text" class="form-control" id="name" name="name" formControlName="name" required>
-        <div class="text-danger" *ngIf="f.name.errors?.['required'] &&(f.name.dirty || f.name.touched)">Name is required</div>
-        <div class="text-danger" *ngIf="f.name.errors?.['minlength'] && (f.name.dirty || f.name.touched)">Name must be at least 3 characters long</div>
-        <div class="text-danger" *ngIf="f.name.errors?.['maxlength'] && (f.name.dirty || f.name.touched)">Name cannot exceed 20 characters</div>
+<div class="form-section">
+
+    <div class="forms">
+
+        <p class="component-heading">Add User</p>
+        <form [formGroup] = "userForm" (ngSubmit)="onSubmit()">
+            <div >
+                <label for="name" class="leading-7 text-sm text-gray-600">User Name </label>
+                <input type="text" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" id="name" name="name" formControlName="name" required>
+                <div class="text-red-500" *ngIf="f.name.errors?.['required'] &&(f.name.dirty || f.name.touched)">Name is required</div>
+                <div class="text-red-500" *ngIf="f.name.errors?.['minlength'] && (f.name.dirty || f.name.touched)">Name must be at least 3 characters long</div>
+                <div class="text-red-500" *ngIf="f.name.errors?.['maxlength'] && (f.name.dirty || f.name.touched)">Name cannot exceed 20 characters</div>
+            </div>
+        
+            <div >
+                <label for="email" class="leading-7 text-sm text-gray-600">Email </label>
+                <input type="email" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" id="email" name="email" formControlName="email" required>
+                <div class="text-red-500" *ngIf="f.email.errors?.['required'] &&(f.email.dirty || f.email.touched)">Email is required</div>
+                <div class="text-red-500" *ngIf="f.email.errors?.['email'] &&(f.email.dirty || f.email.touched)">Invalid Email format</div>
+            </div>
+        
+            <div >
+                <label for="phoneNo" class="leading-7 text-sm text-gray-600">Phone No </label>
+                <input type="text" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" id="phoneNo" name="phoneNo" formControlName="phoneNo" required>
+                <div class="text-red-500" *ngIf="f.phoneNo.errors?.['required'] &&(f.phoneNo.dirty || f.phoneNo.touched)">Phone No. is required</div>
+                <div class="text-red-500" *ngIf="f.phoneNo.errors?.['minlength'] && (f.phoneNo.dirty || f.phoneNo.touched)">Phone No must be 10 digits</div>
+                <div class="text-red-500" *ngIf="f.phoneNo.errors?.['maxlength'] && (f.phoneNo.dirty || f.phoneNo.touched)">Phone No must be 10 digits</div>
+            </div>
+        
+            
+            <div >
+                <label for="id" class="leading-7 text-sm text-gray-600">Trainer ID </label>
+                <input type="number" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" id="id" name="id" formControlName="id" required>
+                <div class="text-red-500" *ngIf="f.id.errors?.['required'] &&((f.id.dirty || f.id.touched))">ID is required</div>
+                <div class="text-red-500" *ngIf="f.id.errors?.['min'] && (f.id.dirty || f.id.touched)">ID must be atleast 1</div>
+            </div>
+            <div >
+                <label for="packageNo" class="leading-7 text-sm text-gray-600">Package ID</label>
+                <input type="number" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" id="packageNo" name="packageNo" formControlName="packageNo" required>
+                <div class="text-red-500" *ngIf="f.packageNo.errors?.['required'] &&((f.packageNo.dirty || f.packageNo.touched))">ID is required</div>
+                <div class="text-red-500" *ngIf="f.packageNo.errors?.['min'] && (f.packageNo.dirty || f.packageNo.touched)">ID must be atleast 1</div>
+            </div>
+            <div >
+                <label for="gymID" class="leading-7 text-sm text-gray-600">Gym ID </label>
+                <input type="number" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" id="gymID" name="gymID" formControlName="gymID" required>
+                <div class="text-red-500" *ngIf="f.gymID.errors?.['required'] &&((f.gymID.dirty || f.gymID.touched))">ID is required</div>
+                <div class="text-red-500" *ngIf="f.gymID.errors?.['min'] && (f.gymID.dirty || f.gymID.touched)">ID must be atleast 1</div>
+            </div><br>
+        
+            <input type="submit" value="Add User" class="text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg">
+        </form>
     </div>
+</div>
 
-    <div class="form-group">
-        <label for="email">Email </label>
-        <input type="email" class="form-control" id="email" name="email" formControlName="email" required>
-        <div class="text-danger" *ngIf="f.email.errors?.['required'] &&(f.email.dirty || f.email.touched)">Email is required</div>
-        <div class="text-danger" *ngIf="f.email.errors?.['email'] &&(f.email.dirty || f.email.touched)">Invalid Email format</div>
-    </div>
 
-    <div class="form-group">
-        <label for="phoneNo">Phone No </label>
-        <input type="text" class="form-control" id="phoneNo" name="phoneNo" formControlName="phoneNo" required>
-        <div class="text-danger" *ngIf="f.phoneNo.errors?.['required'] &&(f.phoneNo.dirty || f.phoneNo.touched)">Phone No. is required</div>
-        <div class="text-danger" *ngIf="f.phoneNo.errors?.['minlength'] && (f.phoneNo.dirty || f.phoneNo.touched)">Phone No must be 10 digits</div>
-        <div class="text-danger" *ngIf="f.phoneNo.errors?.['maxlength'] && (f.phoneNo.dirty || f.phoneNo.touched)">Phone No must be 10 digits</div>
-    </div>
-
-    
-    <div class="form-group">
-        <label for="id">Trainer ID </label>
-        <input type="number" class="form-control" id="id" name="id" formControlName="id" required>
-        <div class="text-danger" *ngIf="f.id.errors?.['required'] &&((f.id.dirty || f.id.touched))">ID is required</div>
-        <div class="text-danger" *ngIf="f.id.errors?.['min'] && (f.id.dirty || f.id.touched)">ID must be atleast 1</div>
-    </div><br>
-    <div class="form-group">
-        <label for="packageNo">Package ID</label>
-        <input type="number" class="form-control" id="packageNo" name="packageNo" formControlName="packageNo" required>
-        <div class="text-danger" *ngIf="f.packageNo.errors?.['required'] &&((f.packageNo.dirty || f.packageNo.touched))">ID is required</div>
-        <div class="text-danger" *ngIf="f.packageNo.errors?.['min'] && (f.packageNo.dirty || f.packageNo.touched)">ID must be atleast 1</div>
-    </div><br>
-    <div class="form-group">
-        <label for="gymID">Gym ID </label>
-        <input type="number" class="form-control" id="gymID" name="gymID" formControlName="gymID" required>
-        <div class="text-danger" *ngIf="f.gymID.errors?.['required'] &&((f.gymID.dirty || f.gymID.touched))">ID is required</div>
-        <div class="text-danger" *ngIf="f.gymID.errors?.['min'] && (f.gymID.dirty || f.gymID.touched)">ID must be atleast 1</div>
-    </div><br>
-
-    <input type="submit" value="Add User" class="btn btn-primary">
-</form>
 

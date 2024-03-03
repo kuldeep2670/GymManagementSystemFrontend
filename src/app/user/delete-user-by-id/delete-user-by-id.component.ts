@@ -24,6 +24,7 @@ export class DeleteUserByIdComponent {
     this.userService.deleteById(ID).subscribe((responseData)=>{
     
       console.log(responseData);
+      alert(responseData);
       this.goToUserList();
 
     })

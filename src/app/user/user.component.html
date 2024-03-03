@@ -1,4 +1,4 @@
-<ul>
+<!-- <ul>
   <li><a routerLink="/user/getall">Get All Users</a></li>
   <li><a routerLink="/user/add">Add User</a></li>
   <li><a routerLink="/user/get">Get User by id</a></li>
@@ -6,4 +6,35 @@
   <li><a routerLink="/user/delete">Delete User by id</a></li> 
 </ul>
 <hr />
+<router-outlet></router-outlet> -->
+<div class="package-nav">
+  <a routerLink="/user/getall">
+    <button class="bg-[#ffdab9] hover:bg-[#E2BE9E] text-gray-900 font-bold py-2 px-4 border border-gray-700 rounded">
+      Get All Users
+    </button>
+  </a>
+  <a routerLink="/user/add">
+    <button class="bg-[#ffdab9] hover:bg-[#E2BE9E] text-gray-900 font-bold py-2 px-4 border border-gray-700 rounded">
+      Add User
+    </button>
+  </a>
+  <a routerLink="/user/get">
+    <button class="bg-[#ffdab9] hover:bg-[#E2BE9E] text-gray-900 font-bold py-2 px-4 border border-gray-700 rounded">
+      Get User by id
+    </button>
+  </a>
+  <a routerLink="/user/update">
+    <button class="bg-[#ffdab9] hover:bg-[#E2BE9E] text-gray-900 font-bold py-2 px-4 border border-gray-700 rounded">
+      Update User by id
+    </button>
+  </a>
+  <a routerLink="/user/delete">
+    <button class="bg-[#ffdab9] hover:bg-[#E2BE9E] text-gray-900 font-bold py-2 px-4 border border-gray-700 rounded">
+      Delete User by id
+    </button>
+  </a>
+</div>
+
+<hr />
+
 <router-outlet></router-outlet>
